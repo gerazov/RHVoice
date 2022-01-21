@@ -92,12 +92,22 @@ zh:sh] ;
 define FlagExceptions 
 #antyatom, antyenergetyczny, antyimport, antyoksydant, antyustrojowy:
 ih @-> ih2 || {ant} _ VowelPhonem,,
+#d z, not dz:
+[dz] @-> dz2 ||
+#odzew, odzmysławiać, odznaka, odzywać...
+.#. o _ \i ,,
 #d zi, not dzi:
-[dz i] @-> dzi2 ||
+[dz i] @-> dzi2 ||
+#odziomek
+.#. o _ o ,
 #podziemię, niepodziemny:
 .#. (n i e) p o _ e m,
 #podzięb:
 .#. (n i e) p o _ en b ,,
+#d zi i not dzi
+[dz i] @-> dzi3 ||
+#odzipnąć
+.#. o _ p ,,
 #d ż, nie dż:
 [dzh] @-> dzh2 ||
 #budże*
@@ -115,7 +125,9 @@ _ n [ g | u ],
 #aksis aksisie not basista
  _ s [.#.|\t],
 #epsilon, ypsilon
-p _ l ,,
+p _ l ,
+#sizal, sizalami, not bruksizm, marksizować, psiząb...
+_ z [\on&\m&\o],,
 #"z i", not convert to zi:
 {zi} @-> zi2 ||
 #*bezi (not bezik*)
@@ -131,7 +143,9 @@ x i e @-> k si e || _ ;
 
 
 define UnflagExceptions [
+dz2:[d z] |
 dzi2:[d zi] |
+dzi3:[d zi i] |
 dzh2:[d zh] |
 si2: [s i] |
 ih2: ih |
