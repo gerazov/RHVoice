@@ -16,7 +16,9 @@
 
 define NZDigit 1|2|3|4|5|6|7|8|9;
 define Digit %0|NZDigit;
-define Number %0|[NZDigit Digit^<15];
+define Number (%-) [ %0|[ NZDigit Digit^<15]];
+
+define InsertMinus %- @-> minus || _ ;
 
 define InsertThousands 
 [..] -> tysięcy || Digit _ Digit^3 .#.;
@@ -76,4 +78,5 @@ RemoveSkippedParts .o.
 DigitsToWords .o. 
 FixCase .o. 
 RemoveOne .o.
-Fix31Tys ;
+Fix31Tys  .o.
+InsertMinus;
