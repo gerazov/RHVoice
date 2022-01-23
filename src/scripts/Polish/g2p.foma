@@ -192,30 +192,11 @@ k l i e @-> k l i y e || _ ,,
 x @-> k s || _ ;
 
 
-define procStress1 [a:a1|
-on:on1|
-e:e1|
-en:en1|
-i:i1|
-o:o1|
-u:u1|
-ih:ih1
-] @-> ||
-_ \VowelPhonem+ VowelPhonem+ .#.,
-_ \VowelPhonem+ VowelPhonem+ \VowelPhonem+ .#.,
-.#. \VowelPhonem+ _ \VowelPhonem+ .#.;
+source stress.foma
+source unicodechars.foma
 
-define procStress2 [a:a0|
-on:on0|
-e:e0|
-en:en0|
-i:i0|
-o:o0|
-u:u0|
-ih:ih0
-] @-> || _ ;
-
-regex Stage1 .o.
+regex UnicodeToNativeTranslit .o.
+Stage1 .o.
 processMultigraphs1 .o.
 processMultigraphs2 .o.
 processMultigraphs3 .o.
