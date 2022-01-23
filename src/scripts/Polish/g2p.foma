@@ -178,8 +178,10 @@ Softening @-> || SofteningConsonantPhonem _ ,
 i @-> y || _ VowelPhonem ,,
 #y jak j:
 ih @-> y ||
-#boy, boya, yeti, boye, bayerowski, boyizm
-.#. | VowelPhonem _ VowelPhonem|.#.,
+#y vowel yaht, yeti, 
+.#. _ VowelPhonem&\ih,
+#boy, boya, boye, bayerowski, boyizm
+VowelPhonem&\ih _ [VowelPhonem&\ih]|.#.,
 #boys, boysband, disneyland,
 VowelPhonem _ \VowelPhonem ,,
 #e.g.: zaczął=zaczoł, zaczęła=zaczeła:
