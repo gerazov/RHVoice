@@ -769,7 +769,8 @@ class f0_range_computer(f0_extracter):
 		data=list()
 		for name in sorted(os.listdir(raw_dir)):
 			print("Processing {}".format(name))
-			values=self.extract_with_sptk(os.path.join(raw_dir,name),"sptk_rapt",40,700)
+			#values=self.extract_with_sptk(os.path.join(raw_dir,name),"sptk_reaper",40,700)
+			values=self.extract_with_reaper(os.path.join(raw_dir,name),40,700)
 			values=[v for v in values if v!=0]
 			data.extend(numpy.log(values))
 		data=numpy.array(data)
