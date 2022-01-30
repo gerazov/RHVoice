@@ -74,7 +74,7 @@ define UnicodeToNativeTranslit
 [%ώ|%Ώ] -> {o} || _ ;
 
 
-#For tok:
+#For tok (single char to single letter):
 define UnicodeToNativeTranslitTok 
 [%ß|%ẞ] -> s || _ ,,
 [%ñ|%Ñ] -> ń || _ ,,
@@ -224,76 +224,76 @@ define UnicodeSpell
 
 #For lseq:
 define UnicodeLseq 
-%ß:[]|
-%ñ:[]|
-%ç:[]|
-%ḉ:[]|
-%á:[]|
-%é:[]|
-%í:[]|
-%ú:[]|
-%ý:[]|
-%ä:[]|
-%ü:[]|
-%ö:[]|
-%č:[]|
-%ž:[]|
-%š:[]|
-%đ:[]|
-%ř:[]|
-%ň:[]|
-%ě:[]|
-%ľ:[]|
-%ô:[]|
-%ĺ:[]|
-%ŕ:[]|
-%ů:[]|
-%ď:[]|
-%ť:[]|
-%à:[]|
-%è:[]|
-%ì:[]|
-%ò:[]|
-%ù:[]|
-%ã:[]|
-%ë:[]|
-%ō:[]|
-%ŏ:[]|
-%õ:[]|
-%ŭ:[]|
-%α:[]|
-%ά:[]|
-%β:[]|
-%γ:[]|
-%δ:[]|
-%ε:[]|
-%έ:[]|
-%ζ:[]|
-%η:[]|
-%ή:[]|
-%θ:[]|
-%ι:[]|
-%ί:[]|
-%ϊ:[]|
-%κ:[]|
-%λ:[]|
-%μ:[]|
-%ν:[]|
-%ξ:[]|
-%ο:[]|
-%ό:[]|
-%π:[]|
-%ρ:[]|
-%σ:[]|
-%τ:[]|
-%υ:[]|
-%ύ:[]|
-%ϋ:[]|
-%φ:[]|
-%χ:[]|
-%ψ:[]|
-%ω:[]|
-%ώ:[];
+%ß:[sh a r f e s e s]|
+%ñ:[e n z t ih l d on]|
+%ç:[c e z c e d ih l l on]|
+%ḉ:[c e o s t r e z c e d ih l l on]|
+%á:[a o s t r e]|
+%é:[e o s t r e]|
+%í:[i o s t r e]|
+%ú:[u o s t r e]|
+%ý:[i g r e k o s t r e]|
+%ä:[a u m l a u t]|
+%ü:[u u m l a u t]|
+%ö:[o u m l a u t]|
+%č:[c e z h a ch k y e m]|
+%ž:[z e t z h a ch k y e m]|
+%š:[e s z h a ch k y e m]|
+%đ:[d e s k r e si l o n e]|
+%ř:[e r z h a ch k y e m]|
+%ň:[e n z h a ch k y e m]|
+%ě:[e z h a ch k y e m]|
+%ľ:[e l z h a ch k y e m]|
+%ô:[o z d a sh k y e m]|
+%ĺ:[e l o s t r e]|
+%ŕ:[e r o s t r e]|
+%ů:[u z k u w k y e m]|
+%ď:[d e z h a ch k y e m]|
+%ť:[t e z h a ch k y e m]|
+%à:[a ci en sh k y e]|
+%è:[e ci en sh k y e]|
+%ì:[i ci en sh k y e]|
+%ò:[o ci en sh k y e]|
+%ù:[u ci en sh k y e]|
+%ã:[a z t ih l d on]|
+%ë:[e u m l a u t]|
+%ō:[o z m a k r o n e m]|
+%ŏ:[o z w u ch k y e m]|
+%õ:[o z t ih l d on]|
+%ŭ:[u z w u ch k y e m]|
+%α:[a l f a]|
+%ά:[a l f a t o n o s]|
+%β:[b e t a]|
+%γ:[g a m m a]|
+%δ:[d e l t a]|
+%ε:[e p s ih l o n]|
+%έ:[e p s ih l o n t o n o s]|
+%ζ:[z e t a]|
+%η:[e t a]|
+%ή:[e t a t o n o s]|
+%θ:[t h e t a]|
+%ι:[y o t a]|
+%ί:[y o t a t o n o s]|
+%ϊ:[y o t a d y a l i t i k a]|
+%κ:[k a p p a]|
+%λ:[l a m b d a]|
+%μ:[m ih]|
+%ν:[n ih]|
+%ξ:[k si i]|
+%ο:[o m i k r o n]|
+%ό:[o m i k r o n t o n o s]|
+%π:[p i]|
+%ρ:[r o]|
+%σ:[s i g m a]|
+%τ:[t a u]|
+%υ:[i p s ih l o n]|
+%ύ:[i p s ih l o n t o n o s]|
+%ϋ:[i p s ih l o n d y a l i t i k a]|
+%φ:[f i]|
+%χ:[h i]|
+%ψ:[p si i]|
+%ω:[o m e g a]|
+%ώ:[o m e g a t o n o s];
 
 
 #For downcase:
