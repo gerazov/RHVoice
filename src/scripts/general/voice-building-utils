@@ -769,9 +769,12 @@ class f0_range_computer(f0_extracter):
 	def __call__(self,args):
 		raw_dir=os.path.join("data","raw")
 		data=list()
+		method=self.settings["guess_f0_method"]
+		if (not isinstance(method,str)) or len(method)==0:
+			method="sptk_rapt"
 		for name in sorted(os.listdir(raw_dir)):
 			print("Processing {}".format(name))
-			values=self.extract(os.path.join(raw_dir,name),40,700)
+			values=self.extract_with(os.path.join(raw_dir,name),method,40,700)
 			values=[v for v in values if v!=0]
 			data.extend(numpy.log(values))
 		data=numpy.array(data)
