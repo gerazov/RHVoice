@@ -1022,14 +1022,14 @@ class questions_maker(task):
 						prefix=feature.name[:-4]
 					else:
 						prefix=feature.name+"_"
-					f_out.write('QS "{}{}"\t{{{}}}\n'.format(prefix,question,",".join(feature.format_string.format(phoneme) for phoneme in phonemes)).encode('utf-8'))
-			f_out.write(b"\n")
+					f_out.write('QS "{}{}"\t{{{}}}\n'.format(prefix,question,",".join(feature.format_string.format(phoneme) for phoneme in phonemes)))
+			f_out.write("\n")
 		vals2=[]
 		for v in values:
 			vals2.append(str(v))
 		for value in sorted(vals2):
-			f_out.write('QS "{}=={}"\t{{{}}}\n'.format(feature.name,value,feature.format_string.format(value)).encode('utf-8'))
-		f_out.write(b"\n")
+			f_out.write('QS "{}=={}"\t{{{}}}\n'.format(feature.name,value,feature.format_string.format(value)))
+		f_out.write("\n")
 		if not m:
 			real_values=sorted(v for v in vals2 if v!="x")
 			if real_values and all(isinstance(v,int) for v in real_values) and (real_values[-1]>1):
@@ -1037,8 +1037,8 @@ class questions_maker(task):
 				for v in real_values:
 					lesser_values=["x"] if "x" in values else list()
 					lesser_values.extend(range(min_val,v+1))
-					f_out.write('QS "{}<={}"\t{{{}}}\n'.format(feature.name,v,",".join(feature.format_string.format(i) for i in lesser_values)).encode('utf-8'))
-				f_out.write(b"\n")
+					f_out.write('QS "{}<={}"\t{{{}}}\n'.format(feature.name,v,",".join(feature.format_string.format(i) for i in lesser_values)))
+				f_out.write("\n")
 
 	def __call__(self,args):
 		qstdir=os.path.join("data","questions")
@@ -1049,11 +1049,11 @@ class questions_maker(task):
 		phonetic_questions=self.generate_phonetic_questions()
 		hts_features=self.load_hts_features()
 		all_values=self.extract_values(hts_features)
-		with open(os.path.join(qstdir,"questions_qst001.hed"),"wb") as f_out:
+		with open(os.path.join(qstdir,"questions_qst001.hed"),"w") as f_out:
 			for name,feature in hts_features.items():
 				values=all_values[name]
 				self.write_feature_questions(f_out,feature,values,phonetic_questions)
-		with open(os.path.join(qstdir,"questions_utt_qst001.hed"),"wb") as f_out:
+		with open(os.path.join(qstdir,"questions_utt_qst001.hed"),"w") as f_out:
 			for name in ["num_syls_in_utt","num_words_in_utt","num_phrases_in_utt"]:
 				feature=hts_features[name]
 				values=all_values[name]
@@ -1490,11 +1490,11 @@ class bap_extractor(task):
 		self.filters[-1]=firwin(n,freqs[-1],nyq=self.nyq,window=b,pass_zero=False,scale=False)
 		for i in range(1,num_bands-1):
 			self.filters[i]=firwin(n,(freqs[i-1],freqs[i]),nyq=self.nyq,window=b,pass_zero=False,scale=False)
-		with open(os.path.join("data","bpf.txt"),"wb") as fp:
+		with open(os.path.join("data","bpf.txt"),"w") as fp:
 			numpy.array(self.filters.shape).tofile(fp,sep="\n")
-			fp.write(b"\n")
+			fp.write("\n")
 			self.filters.tofile(fp,sep="\n")
-			fp.write(b"\n")
+			fp.write("\n")
 
 	def split_into_bands(self,speech):
 		num_bands=self.filters.shape[0]
