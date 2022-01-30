@@ -644,7 +644,7 @@ class f0_extracter(task):
 		command.append("1" if method.endswith("_ac") else "0")
 		output=subprocess.check_output(command)
 		os.remove("utt.wav")
-		return map(float,output.split())
+		return list(map(float,output.split()))
 
 	def extract_with_sptk(self,filepath,method,min_f0,max_f0):
 		methods={"sptk_rapt":"0","sptk_swipe":"1","sptk_reaper":"2"}
