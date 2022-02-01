@@ -35,7 +35,7 @@ define UnicodeToNativeTranslit
 [%ù|%Ù] -> {u} || _ ,,
 [%ã|%Ã] -> {a} || _ ,,
 [%ë|%Ë] -> {e} || _ ,,
-[%ō|%ó] -> {o} || _ ,,
+[%ō|%Ō] -> {ó} || _ ,,
 [%ŏ|%Ŏ] -> {o} || _ ,,
 [%õ|%Õ] -> {o} || _ ,,
 [%ŭ|%Ŭ] -> {ł} || _ ,,
@@ -109,7 +109,7 @@ define UnicodeToNativeTranslitTok
 [%ù|%Ù] -> u || _ ,,
 [%ã|%Ã] -> a || _ ,,
 [%ë|%Ë] -> e || _ ,,
-[%ō|%ó] -> o || _ ,,
+[%ō|%Ō] -> ó || _ ,,
 [%ŏ|%Ŏ] -> o || _ ,,
 [%õ|%Õ] -> o || _ ,,
 [%ŭ|%Ŭ] -> ł || _ ,,
@@ -183,7 +183,7 @@ define UnicodeSpell
 [[%ù|%Ù]:[u ciężkie]]|
 [[%ã|%Ã]:[a z tyldą]]|
 [[%ë|%Ë]:[e umlaut]]|
-[[%ō|%ó]:[o z makronem]]|
+[[%ō|%Ō]:[o z makronem]]|
 [[%ŏ|%Ŏ]:[o z łuczkiem]]|
 [[%õ|%Õ]:[o z tyldą]]|
 [[%ŭ|%Ŭ]:[u z łuczkiem]]|
@@ -247,7 +247,7 @@ define UnicodeLseq
 %ô:[o z d a sh k y e m]|
 %ĺ:[e l o s t r e]|
 %ŕ:[e r o s t r e]|
-%ů:[u z k u w k y e m]|
+%ů:[u z k o w k y e m]|
 %ď:[d e z h a ch k y e m]|
 %ť:[t e z h a ch k y e m]|
 %à:[a ci en sh k y e]|
@@ -331,7 +331,7 @@ define UnicodeDowncase
 %Ù -> %ù || _ ,,
 %Ã -> %ã || _ ,,
 %Ë -> %ë || _ ,,
-%ó -> %ō || _ ,,
+%Ō -> %ō || _ ,,
 %Ŏ -> %ŏ || _ ,,
 %Õ -> %õ || _ ,,
 %Ŭ -> %ŭ || _ ,,
