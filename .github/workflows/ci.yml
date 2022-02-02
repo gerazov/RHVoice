@@ -3,11 +3,11 @@ name: CI
 on:
   push:
     branches:
-      - 'master'
+      - 'polwork'
 
   pull_request:
     branches:
-      - 'master'
+    - 'polwork'
 
 jobs:
   androidBuild:
